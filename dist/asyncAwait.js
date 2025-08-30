@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.helloAsyncAwait = helloAsyncAwait;
 exports.runSimulateTask = runSimulateTask;
+exports.handleError = handleError;
 const promise_1 = require("./promise");
 // 11. Convert Exercise 1 into async/await.
 function helloAsyncAwait() {
@@ -24,5 +25,18 @@ function runSimulateTask() {
     return __awaiter(this, void 0, void 0, function* () {
         const result = yield (0, promise_1.simulateTask)(2000);
         console.log("12: ", result);
+    });
+}
+// 13. Handle errors using try/catch with async/await.
+function handleError() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const result = yield (0, promise_1.rejectError)();
+            console.log("13: ", result);
+            // throw new Error("Something went wrong")
+        }
+        catch (error) {
+            console.log("13: Error ", error.message);
+        }
     });
 }

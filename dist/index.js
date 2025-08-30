@@ -37,3 +37,5 @@ Promise.race([(0, promise_1.simulateTask)(1000), (0, promise_1.simulateTask)(200
 (0, asyncAwait_1.helloAsyncAwait)();
 // Bai 12
 (0, asyncAwait_1.runSimulateTask)();
+// Bai 13
+(0, asyncAwait_1.handleError)();

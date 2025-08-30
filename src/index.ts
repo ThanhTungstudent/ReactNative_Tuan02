@@ -1,4 +1,4 @@
-import { helloAsyncAwait, runSimulateTask } from "./asyncAwait";
+import { handleError, helloAsyncAwait, runSimulateTask } from "./asyncAwait";
 import { chainNumber, filtersEven, helloAsync, randomNumber, rejectError, resolveTen, simulateTask } from "./promise";
 
 // Bai 1
@@ -47,3 +47,6 @@ helloAsyncAwait()
 
 // Bai 12
 runSimulateTask()
+
+// Bai 13
+handleError()
