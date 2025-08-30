@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const asyncAwait_1 = require("./asyncAwait");
 const promise_1 = require("./promise");
 // Bai 1
 (0, promise_1.helloAsync)().then((msg) => console.log("1: ", msg));
@@ -32,3 +33,7 @@ Promise.race([(0, promise_1.simulateTask)(1000), (0, promise_1.simulateTask)(200
     .then((res) => console.log("10: ", res))
     .catch((err) => console.log("10: Error ", console.log(err.message)))
     .finally(() => console.log("10: Done"));
+// Bai 11
+(0, asyncAwait_1.helloAsyncAwait)();
+// Bai 12
+(0, asyncAwait_1.runSimulateTask)();

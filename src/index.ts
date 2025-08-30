@@ -1,3 +1,4 @@
+import { helloAsyncAwait, runSimulateTask } from "./asyncAwait";
 import { chainNumber, filtersEven, helloAsync, randomNumber, rejectError, resolveTen, simulateTask } from "./promise";
 
 // Bai 1
@@ -40,3 +41,9 @@ filtersEven([1,2,3,4,5,6,7,8])
 .then((res) => console.log("10: ", res))
 .catch((err) => console.log("10: Error ", console.log(err.message)))
 .finally(() => console.log("10: Done"))
+
+// Bai 11
+helloAsyncAwait()
+
+// Bai 12
+runSimulateTask()
